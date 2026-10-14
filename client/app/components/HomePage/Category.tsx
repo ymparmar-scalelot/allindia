@@ -4,7 +4,7 @@ import Image from "next/image"
 
 const Category = () => {
     return (<>
-
+        <h1>Categories</h1>
         <div className="flex flex-row gap-2 my-1">
             <Image className="dark:invert h-1/2 w-3/2"
                 src="/BANNER1.png"
@@ -37,9 +37,6 @@ const Category = () => {
                 height={20}
                 priority
             />
-
-            
-
         </div>
     </>)
 }

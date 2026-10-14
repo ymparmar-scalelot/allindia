@@ -5,7 +5,7 @@ import { useState } from "react"
 
 
 const Banner = () => {
-  const [banners, setBanners] = useState<string[]>([]);
+  const [banners, setBanners] = useState<string[]>(["/BANNER1.png","/BANNER2.png","/BANNER3.png","/BANNER4.png"]);
 
   return (
     <>

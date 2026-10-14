@@ -11,13 +11,17 @@ import mongoose from 'mongoose';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const app = express()
-const PORT = process.env.PORT
+const app = express();
+const PORT = process.env.SERVER_PORT || process.env.PORT || 5000;
 
-connectDB()
+connectDB();
 
 const corsOptions = {
-    origin: ['http://localhost:3000', 'https://allindia.shop'],
+    origin: [
+        process.env.CLIENT_URL || 'http://localhost:3000',
+        process.env.ADMIN_URL || 'http://localhost:8000',
+        'https://allindia.shop'
+    ],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true
 };
@@ -31,7 +35,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors(corsOptions))
 
-    
+
 
 
 mongoose.set('runValidators', true);

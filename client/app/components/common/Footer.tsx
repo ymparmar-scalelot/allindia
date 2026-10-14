@@ -3,9 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const Header = () => {
+const Footer = () => {
     return (
-        <header className="w-full border-b items-center bg-white">
+        <footer className="w-full border-b items-center bg-white">
             <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
                 
                 {/* Logo */}
@@ -58,11 +58,28 @@ const Header = () => {
                                 About
                             </Link>
                         </li>
+
+                          <li>
+                            <Link
+                                href="/cart"
+                                className="text-gray-700 transition hover:text-black"
+                            >
+                                Cart
+                            </Link>
+                        </li>
+                         <li>
+                            <Link
+                                href="/profile"
+                                className="text-gray-700 transition hover:text-black"
+                            >
+                                Profile
+                            </Link>
+                        </li>
                     </ul>
                 </nav>
-            </div>
-        </header>
+            </div>  
+        </footer>
     );
 };
 
-export default Header;
+export default Footer;

@@ -1,10 +1,10 @@
-import Header from "./components/Header";
+import Header from "./components/common/Header";
 import Banner from "./components/HomePage/Banner";
 import Category from "./components/HomePage/Category";
 
 export default function Home() {
   return (
-    <div className="flex w-full flex-col items-center justify-between   dark:bg-black mx-auto">
+    <div className="flex w-full flex-col items-center justify-between   mx-auto">
 
       <Header />
       <main className="">
